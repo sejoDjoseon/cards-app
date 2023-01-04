@@ -96,6 +96,7 @@
             "styles": [
               "src/styles.sass"
             ],
+            "stylePreprocessorOptions": { "includePaths": [ "src/shared/styles" ] },
             "scripts": []
           }
         }

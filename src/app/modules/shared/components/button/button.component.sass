@@ -1,0 +1,27 @@
+@use "variables"
+
+:host
+    display: flex
+    width: 100%
+    height: variables.$size-XL
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    border-radius: 4px
+
+:host.primary
+    background-color: variables.$primary-color
+    color: variables.$font-light-color
+    box-shadow: 0 0.2em 0 0 #c25816
+
+:host.secondary
+    background-color: variables.$background-primary
+    color: variables.$primary-color
+    border: solid 2px
+
+:host.secondary:hover
+    transform: translateY(-2px)
+
+:host.primary:hover
+    transform: translateY(-2px)
+    box-shadow: 0 0.22em 0 0 #c25816

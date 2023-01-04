@@ -8,6 +8,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { CircleButtonComponent } from './components/header/components/circle-button/circle-button.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     AppRoutingModule,
     FontAwesomeModule,
     MatSidenavModule,
+    SharedModule,
   ],
 })
 export class MenuModule {}

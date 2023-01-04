@@ -1,6 +1,6 @@
 <mat-drawer-container class="container" hasBackdrop="true">
-    <mat-drawer #drawer mode="over" position="end">
-        Drawer
+    <mat-drawer #drawer mode="over" position="end" opened="true">
+        <app-configuration></app-configuration>
     </mat-drawer>
     <mat-drawer-content>
         <app-header (openOptions)="drawer.toggle()"></app-header>

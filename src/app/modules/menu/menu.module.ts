@@ -7,6 +7,7 @@ import { MenuComponent } from './menu.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { CircleButtonComponent } from './components/header/components/circle-button/circle-button.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MenuComponent,
     CircleButtonComponent,
   ],
-  imports: [CommonModule, AppRoutingModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    MatSidenavModule,
+  ],
 })
 export class MenuModule {}

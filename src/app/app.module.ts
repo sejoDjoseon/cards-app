@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MenuModule } from './modules/menu/menu.module';
 import { PlayerModule } from './modules/player/player.module';
 import { SharedModule } from './modules/shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { SharedModule } from './modules/shared/shared.module';
     PlayerModule,
     SharedModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

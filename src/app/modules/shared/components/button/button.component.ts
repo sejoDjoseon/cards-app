@@ -10,7 +10,7 @@ type ButtonType = 'primary' | 'secondary';
 
 @Component({
   selector: 'app-button',
-  templateUrl: './button.component.html',
+  template: `<ng-content></ng-content>`,
   styleUrls: ['./button.component.sass'],
 })
 export class ButtonComponent {

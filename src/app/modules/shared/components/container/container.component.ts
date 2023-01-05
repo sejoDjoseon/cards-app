@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-container',
-  templateUrl: './container.component.html',
-  styleUrls: ['./container.component.sass']
+  template: `<ng-content></ng-content>`,
+  styleUrls: ['./container.component.sass'],
 })
-export class ContainerComponent {
-
-}
+export class ContainerComponent {}

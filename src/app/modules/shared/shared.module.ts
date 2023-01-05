@@ -7,6 +7,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { LinkComponent } from './components/link/link.component';
 import { ContainerComponent } from './components/container/container.component';
 import { ListComponent } from './components/list/list.component';
+import { ScreenContainerComponent } from './components/screen-container/screen-container.component';
 
 @NgModule({
   exports: [
@@ -17,12 +18,14 @@ import { ListComponent } from './components/list/list.component';
     LinkComponent,
     ContainerComponent,
     ListComponent,
+    ScreenContainerComponent,
   ],
   declarations: [
     ButtonComponent,
     LinkComponent,
     ContainerComponent,
     ListComponent,
+    ScreenContainerComponent,
   ],
   imports: [CommonModule],
 })

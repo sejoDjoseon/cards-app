@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SharedModule } from '../shared/shared.module';
 import { ScreenNavigationComponent } from './components/screen-navigation/screen-navigation.component';
+import { LessonsComponent } from './screens/lessons/lessons.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ScreenNavigationComponent } from './components/screen-navigation/screen
     MenuComponent,
     CircleButtonComponent,
     ScreenNavigationComponent,
+    LessonsComponent,
   ],
   imports: [
     CommonModule,

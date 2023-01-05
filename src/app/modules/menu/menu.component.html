@@ -4,7 +4,8 @@
     </mat-drawer>
     <mat-drawer-content>
         <app-header (openOptions)="drawer.toggle()"></app-header>
-        <app-button></app-button>
+        <app-button (click)="drawer.toggle()">Button</app-button>
+        <app-link (click)="drawer.toggle()">Link button</app-link>
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>

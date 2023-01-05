@@ -9,6 +9,7 @@ import { CircleButtonComponent } from './components/header/components/circle-but
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SharedModule } from '../shared/shared.module';
+import { ScreenNavigationComponent } from './components/screen-navigation/screen-navigation.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
     ConfigurationComponent,
     MenuComponent,
     CircleButtonComponent,
+    ScreenNavigationComponent,
   ],
   imports: [
     CommonModule,

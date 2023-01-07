@@ -8,6 +8,7 @@ import { LinkComponent } from './components/link/link.component';
 import { ContainerComponent } from './components/container/container.component';
 import { ListComponent } from './components/list/list.component';
 import { ScreenContainerComponent } from './components/screen-container/screen-container.component';
+import { ContainerActionsComponent } from './components/container-actions/container-actions.component';
 
 @NgModule({
   exports: [
@@ -17,6 +18,7 @@ import { ScreenContainerComponent } from './components/screen-container/screen-c
     ButtonComponent,
     LinkComponent,
     ContainerComponent,
+    ContainerActionsComponent,
     ListComponent,
     ScreenContainerComponent,
   ],
@@ -24,6 +26,7 @@ import { ScreenContainerComponent } from './components/screen-container/screen-c
     ButtonComponent,
     LinkComponent,
     ContainerComponent,
+    ContainerActionsComponent,
     ListComponent,
     ScreenContainerComponent,
   ],

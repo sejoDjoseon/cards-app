@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Output } from '@angular/core';
 
 @Component({
   selector: 'app-link',
@@ -13,7 +13,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class LinkComponent {
   @Output() click = new EventEmitter<void>();
 
-  onClick() {
-    console.log('click link');
+  @HostBinding('class') get classes(): Record<string, boolean> {
+    return {
+      'action-text': true,
+    };
   }
 }

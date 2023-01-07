@@ -10,7 +10,7 @@ type ButtonType = 'primary' | 'secondary';
 
 @Component({
   selector: 'app-button',
-  template: `<ng-content></ng-content>`,
+  template: `<div class="content"><ng-content></ng-content></div>`,
   styleUrls: ['./button.component.sass'],
 })
 export class ButtonComponent {
@@ -18,7 +18,10 @@ export class ButtonComponent {
 
   @Output() click = new EventEmitter<void>();
 
-  @HostBinding('class') get buttonType() {
-    return this.type;
+  @HostBinding('class') get classes(): Record<string, boolean> {
+    return {
+      [this.type]: true,
+      'action-text': true,
+    };
   }
 }

@@ -4,5 +4,11 @@
     display: flex
     flex-direction: column
     height: 100%
-    width: calc(100% - variables.$size-XL * 3)
+    width: calc(100% - variables.$size-XL * 2)
     margin: variables.$size-XL
+
+.navigation
+    margin-top: -(variables.$size-S)
+
+.navigation:empty
+    display: none

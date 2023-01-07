@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-screen-container',
-  template: `<ng-content></ng-content>`,
+  templateUrl: './screen-container.component.html',
   styleUrls: ['./screen-container.component.sass'],
 })
 export class ScreenContainerComponent {}

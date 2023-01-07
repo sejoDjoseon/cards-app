@@ -9,8 +9,8 @@ import { CircleButtonComponent } from './components/header/components/circle-but
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SharedModule } from '../shared/shared.module';
-import { ScreenNavigationComponent } from './components/screen-navigation/screen-navigation.component';
 import { LessonsComponent } from './screens/lessons/lessons.component';
+import { TrimesterProgressComponent } from './components/trimester-progress/trimester-progress.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,8 @@ import { LessonsComponent } from './screens/lessons/lessons.component';
     ConfigurationComponent,
     MenuComponent,
     CircleButtonComponent,
-    ScreenNavigationComponent,
     LessonsComponent,
+    TrimesterProgressComponent,
   ],
   imports: [
     CommonModule,

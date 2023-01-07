@@ -6,7 +6,6 @@ import { MatInputModule } from '@angular/material/input';
 import { ButtonComponent } from './components/button/button.component';
 import { LinkComponent } from './components/link/link.component';
 import { ContainerComponent } from './components/container/container.component';
-import { ListComponent } from './components/list/list.component';
 import { ScreenContainerComponent } from './components/screen-container/screen-container.component';
 import { ContainerActionsComponent } from './components/container-actions/container-actions.component';
 import { ClickableDirective } from './directives/clickable.directive';
@@ -21,7 +20,6 @@ import { ScreenNavigationComponent } from './components/screen-navigation/screen
     LinkComponent,
     ContainerComponent,
     ContainerActionsComponent,
-    ListComponent,
     ScreenContainerComponent,
     ScreenNavigationComponent,
     ClickableDirective,
@@ -31,7 +29,6 @@ import { ScreenNavigationComponent } from './components/screen-navigation/screen
     LinkComponent,
     ContainerComponent,
     ContainerActionsComponent,
-    ListComponent,
     ScreenContainerComponent,
     ScreenNavigationComponent,
     ClickableDirective,

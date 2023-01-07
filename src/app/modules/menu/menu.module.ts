@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SharedModule } from '../shared/shared.module';
 import { LessonsComponent } from './screens/lessons/lessons.component';
 import { TrimesterProgressComponent } from './components/trimester-progress/trimester-progress.component';
+import { LessonsListComponent } from './components/lessons-list/lessons-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TrimesterProgressComponent } from './components/trimester-progress/trim
     CircleButtonComponent,
     LessonsComponent,
     TrimesterProgressComponent,
+    LessonsListComponent,
   ],
   imports: [
     CommonModule,

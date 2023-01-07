@@ -1,11 +1,11 @@
 @use "variables"
 
 :host
-    display: flex
-    flex-direction: column
-    height: 100%
+    display: block
+    height: calc(100% - variables.$size-XL * 4)
     width: calc(100% - variables.$size-XL * 2)
     margin: variables.$size-XL
+    margin-top: variables.$size-XL * 3
 
 .navigation
     margin-top: -(variables.$size-S)

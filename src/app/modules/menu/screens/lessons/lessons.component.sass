@@ -2,7 +2,11 @@
 
 .layout
     display: flex
+    height: calc(100% - variables.$size-XL * 2)
+    max-height: calc(100% - variables.$size-XL * 2)
+    align-items: flex-start
 
 .table-container
     flex-grow: 1
     margin-left: variables.$size-S
+    height: 100%

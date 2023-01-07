@@ -1,10 +1,28 @@
 <app-screen-container>
-    <app-container>
+    <app-container class="continue-container">
         <p container-title>Vuelve donde lo dejaste</p>
         <p>2º Trimestre - Sesión 25, Ordinales, Fracciones y Decimales</p>
         <app-container-actions>
-            <app-button type="secondary" (click)="{}">Button</app-button>
-            <app-link (click)="{}">Link button</app-link>
+            <app-button (click)="click()">Reproducción ordenada</app-button>
+            <app-button type="secondary" (click)="click()">Aleatorio</app-button>
+            <app-button type="secondary" (click)="click()">Siguiente sesión</app-button>
         </app-container-actions>
     </app-container>
+
+    <p class="section-title">Temario</p>
+
+    <div class="trimesters-row">
+        <app-container appClickable (click)="click()">
+            <p container-title>1º Trimestre</p>
+            <p>50/50 sesiones</p>
+        </app-container>
+        <app-container appClickable (click)="click()">
+            <p container-title>2º Trimestre</p>
+            <p>50/50 sesiones</p>
+        </app-container>
+        <app-container appClickable (click)="click()">
+            <p container-title>3º Trimestre</p>
+            <p>50/50 sesiones</p>
+        </app-container>
+    </div>
 </app-screen-container>

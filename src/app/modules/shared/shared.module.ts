@@ -9,6 +9,7 @@ import { ContainerComponent } from './components/container/container.component';
 import { ListComponent } from './components/list/list.component';
 import { ScreenContainerComponent } from './components/screen-container/screen-container.component';
 import { ContainerActionsComponent } from './components/container-actions/container-actions.component';
+import { ClickableDirective } from './directives/clickable.directive';
 
 @NgModule({
   exports: [
@@ -21,6 +22,7 @@ import { ContainerActionsComponent } from './components/container-actions/contai
     ContainerActionsComponent,
     ListComponent,
     ScreenContainerComponent,
+    ClickableDirective,
   ],
   declarations: [
     ButtonComponent,
@@ -29,6 +31,7 @@ import { ContainerActionsComponent } from './components/container-actions/contai
     ContainerActionsComponent,
     ListComponent,
     ScreenContainerComponent,
+    ClickableDirective,
   ],
   imports: [CommonModule],
 })

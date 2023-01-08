@@ -12,6 +12,9 @@ import { SharedModule } from '../shared/shared.module';
 import { LessonsComponent } from './screens/lessons/lessons.component';
 import { TrimesterProgressComponent } from './components/trimester-progress/trimester-progress.component';
 import { LessonsListComponent } from './components/lessons-list/lessons-list.component';
+import { LessonsListHeaderComponent } from './components/lessons-list/components/lessons-list-header/lessons-list-header.component';
+import { LessonsListRowComponent } from './components/lessons-list/components/lessons-list-row/lessons-list-row.component';
+import { LessonsListProgressComponent } from './components/lessons-list/components/lessons-list-progress/lessons-list-progress.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { LessonsListComponent } from './components/lessons-list/lessons-list.com
     LessonsComponent,
     TrimesterProgressComponent,
     LessonsListComponent,
+    LessonsListHeaderComponent,
+    LessonsListRowComponent,
+    LessonsListProgressComponent,
   ],
   imports: [
     CommonModule,

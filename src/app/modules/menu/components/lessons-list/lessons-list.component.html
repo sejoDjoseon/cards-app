@@ -5,9 +5,10 @@
 <div class="scroll-content">
     <div class="inner">
         <app-lessons-list-row *ngFor="let lesson of lessons; let i = index">
-            <p lesson-number>1</p>
-            <p lesson-name>Ordinales</p>
-            <div right-indicator><app-icon [icon]="iconsName.NotViewed"></app-icon></div>
+            <p lesson-number><b>{{lesson.number}}</b></p>
+            <p lesson-name>{{lesson.name}}</p>
+            <div right-indicator [class.not-viewed]="!lesson.viewed"><app-icon
+                    [icon]="getIconViewed(lesson.viewed)"></app-icon></div>
             <div actions class="actions">
                 <div (click)="playLesson(i, true)">
                     <app-icon [icon]="iconsName.Random" size="L"></app-icon>

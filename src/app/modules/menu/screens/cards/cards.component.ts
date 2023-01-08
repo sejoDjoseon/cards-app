@@ -18,7 +18,15 @@ export class CardsComponent implements OnInit {
     this.courseObs$ = this.courseService.getCourse();
   }
 
-  navigateTrimesterLessons() {
-    this.router.navigate(['/cards/lessons', '1']);
+  navigateTrimesterLessons(trimester: number) {
+    this.router.navigate(['/cards/lessons', trimester]);
+  }
+
+  playLesson(lesson: string) {
+    console.log(`play lesson ${lesson}, random mode = false`);
+  }
+
+  playRandom() {
+    console.log('play random lesson');
   }
 }

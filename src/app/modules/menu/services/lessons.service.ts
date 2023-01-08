@@ -7,20 +7,19 @@ export class LessonsService {
   constructor() {}
 
   lessons: Lesson[] = [
-    { number: 1, name: 'Ordinales', viewed: true },
-    { number: 1, name: 'Ordinales', viewed: true },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
-    { number: 1, name: 'Ordinales', viewed: false },
+    { id: '1', number: 1, name: 'Ordinales', viewed: true },
+    { id: '1', number: 1, name: 'Ordinales', viewed: true },
+    { id: '1', number: 1, name: 'Ordinales', viewed: true },
+    { id: '1', number: 1, name: 'Ordinales', viewed: true },
+    { id: '1', number: 1, name: 'Ordinales', viewed: false },
+    { id: '1', number: 1, name: 'Ordinales', viewed: false },
+    { id: '1', number: 1, name: 'Ordinales', viewed: false },
+    { id: '1', number: 1, name: 'Ordinales', viewed: false },
+    { id: '1', number: 1, name: 'Ordinales', viewed: false },
+    { id: '1', number: 1, name: 'Ordinales', viewed: false },
+    { id: '1', number: 1, name: 'Ordinales', viewed: false },
+    { id: '1', number: 1, name: 'Ordinales', viewed: false },
+    { id: '1', number: 1, name: 'Ordinales', viewed: false },
   ];
 
   getLessons(): Observable<Lesson[]> {

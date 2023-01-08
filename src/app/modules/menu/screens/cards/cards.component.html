@@ -2,28 +2,21 @@
     <ng-template [ngIf]="obs.value">
         <app-container class="continue-container">
             <p container-title>Vuelve donde lo dejaste</p>
-            <p>{{obs.value.currentLesson.name}}</p>
+            <p>{{obs.value.currentLesson | currentLesson}}</p>
             <app-container-actions>
-                <app-button (click)="{}">Reproducción ordenada</app-button>
-                <app-button type="secondary" (click)="{}">Aleatorio</app-button>
-                <app-button type="secondary" (click)="{}">Siguiente sesión</app-button>
+                <app-button (click)="playLesson(obs.value.currentLesson.lesson.id)">Reproducción ordenada</app-button>
+                <app-button type="secondary" (click)="playRandom()">Aleatorio</app-button>
+                <app-button type="secondary" (click)="playLesson(obs.value.nextLessonId)">Siguiente sesión</app-button>
             </app-container-actions>
         </app-container>
 
         <p class="section-title">Temario</p>
 
         <div class="trimesters-row">
-            <app-container appClickable (click)="navigateTrimesterLessons()">
-                <p container-title>1º Trimestre</p>
-                <p>50/50 sesiones</p>
-            </app-container>
-            <app-container appClickable (click)="navigateTrimesterLessons()">
-                <p container-title>2º Trimestre</p>
-                <p>50/50 sesiones</p>
-            </app-container>
-            <app-container appClickable (click)="navigateTrimesterLessons()">
-                <p container-title>3º Trimestre</p>
-                <p>50/50 sesiones</p>
+            <app-container *ngFor="let trimester of obs.value.trimesters"
+                (click)="navigateTrimesterLessons(trimester.number)" appClickable>
+                <p container-title>{{trimester.number}}º Trimestre</p>
+                <p>{{trimester.viewedLessons}}/{{trimester.totalLessons}} sesiones</p>
             </app-container>
         </div>
     </ng-template>

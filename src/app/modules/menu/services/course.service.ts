@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { debounceTime, delay, Observable, of } from 'rxjs';
+import { delay, Observable, of } from 'rxjs';
 import { Course } from 'src/app/models/Course.model';
 
 @Injectable()
@@ -11,10 +11,15 @@ export class CourseService {
     language: 'es',
     name: '1º de infantil',
     currentLesson: {
-      name: 'Ordinales, Fracciones y Decimales',
-      number: 25,
-      viewed: false,
+      trimester: 2,
+      lesson: {
+        id: 'es-1-inf-2-25',
+        name: 'Ordinales, Fracciones y Decimales',
+        number: 25,
+        viewed: false,
+      },
     },
+    nextLessonId: 'es-1-inf-2-26',
     trimesters: [
       { number: 1, totalLessons: 50, viewedLessons: 50 },
       { number: 2, totalLessons: 50, viewedLessons: 25 },

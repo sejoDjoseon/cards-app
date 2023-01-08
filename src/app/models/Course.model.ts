@@ -10,7 +10,11 @@ interface Course {
   id: string;
   language: string;
   name: string;
-  currentLesson: Lesson;
+  currentLesson: {
+    trimester: number;
+    lesson: Lesson;
+  };
+  nextLessonId: string;
   trimesters: Trimester[];
 }
 

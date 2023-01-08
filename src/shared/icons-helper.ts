@@ -1,5 +1,19 @@
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
-import { faBars, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowRightFromBracket,
+  faBars,
+  faCirclePlay,
+  faCoffee,
+  faEye,
+  faEyeSlash,
+  faGear,
+  faHourglass,
+  faPause,
+  faPlay,
+  faShare,
+  faShuffle,
+  faVolumeUp,
+} from '@fortawesome/free-solid-svg-icons';
 
 enum IconName {
   Menu = 'Menu',
@@ -20,17 +34,17 @@ enum IconName {
 function getFaIcon(icon: IconName): IconDefinition {
   return {
     [IconName.Menu]: faBars,
-    [IconName.Configuration]: faCoffee,
-    [IconName.Exit]: faCoffee,
-    [IconName.Viewed]: faCoffee,
-    [IconName.NotViewed]: faCoffee,
-    [IconName.Play]: faCoffee,
-    [IconName.PlayInverted]: faCoffee,
-    [IconName.Random]: faCoffee,
-    [IconName.Next]: faCoffee,
-    [IconName.Sound]: faCoffee,
-    [IconName.Timer]: faCoffee,
-    [IconName.Pause]: faCoffee,
+    [IconName.Configuration]: faGear,
+    [IconName.Exit]: faArrowRightFromBracket,
+    [IconName.Viewed]: faEye,
+    [IconName.NotViewed]: faEyeSlash,
+    [IconName.Play]: faPlay,
+    [IconName.PlayInverted]: faCirclePlay,
+    [IconName.Random]: faShuffle,
+    [IconName.Next]: faShare,
+    [IconName.Sound]: faVolumeUp,
+    [IconName.Timer]: faHourglass,
+    [IconName.Pause]: faPause,
     [IconName.Coffe]: faCoffee,
   }[icon];
 }

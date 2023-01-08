@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { IconName } from 'src/shared/icons-helper';
 
 const LESSONS_MOCK = [
   { number: 1, name: 'Ordinales', viewed: true },
@@ -24,7 +24,7 @@ const LESSONS_MOCK = [
   styleUrls: ['./lessons-list.component.sass'],
 })
 export class LessonsListComponent {
-  faCoffee = faCoffee;
+  readonly iconsName = IconName;
 
   lessons = LESSONS_MOCK;
 }

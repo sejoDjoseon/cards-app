@@ -7,13 +7,13 @@
         <app-lessons-list-row *ngFor="let lesson of lessons">
             <p lesson-number>1</p>
             <p lesson-name>Ordinales</p>
-            <div right-indicator><app-icon></app-icon></div>
+            <div right-indicator><app-icon [icon]="iconsName.NotViewed"></app-icon></div>
             <div actions>
                 <div>
-                    <app-icon></app-icon>
+                    <app-icon [icon]="iconsName.Random" size="L"></app-icon>
                 </div>
                 <div>
-                    <app-icon></app-icon>
+                    <app-icon [icon]="iconsName.PlayInverted" size="L"></app-icon>
                 </div>
             </div>
         </app-lessons-list-row>

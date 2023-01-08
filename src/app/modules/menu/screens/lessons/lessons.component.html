@@ -5,8 +5,8 @@
             <p container-title>1º Trimestre</p>
             <p>50/50 sesiones</p>
         </app-container>
-        <div class="table-container">
-            <app-lessons-list></app-lessons-list>
+        <div *ngIf="lessonsObs | async as lessons" class="table-container">
+            <app-lessons-list [lessons]="lessons"></app-lessons-list>
         </div>
     </div>
 </app-screen-container>

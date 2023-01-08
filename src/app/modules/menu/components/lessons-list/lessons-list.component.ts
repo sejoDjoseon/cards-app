@@ -1,22 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Lesson } from 'src/app/models/Lesson.model';
 import { IconName } from 'src/shared/icons-helper';
-
-const LESSONS_MOCK = [
-  { number: 1, name: 'Ordinales', viewed: true },
-  { number: 1, name: 'Ordinales', viewed: true },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-  { number: 1, name: 'Ordinales', viewed: false },
-];
 
 @Component({
   selector: 'app-lessons-list',
@@ -26,7 +10,8 @@ const LESSONS_MOCK = [
 export class LessonsListComponent {
   readonly iconsName = IconName;
 
-  lessons = LESSONS_MOCK;
+  @Input()
+  lessons: Lesson[] = [];
 
   playLesson(i: number, random = false) {
     const lesson = this.lessons[i];

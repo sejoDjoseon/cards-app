@@ -12,6 +12,7 @@ import { ClickableDirective } from './directives/clickable.directive';
 import { ScreenNavigationComponent } from './components/screen-navigation/screen-navigation.component';
 import { IconComponent } from './components/icon/icon.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WithLoadingPipe } from './pipes/with-loading.pipe';
 
 @NgModule({
   exports: [
@@ -26,6 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ScreenNavigationComponent,
     ClickableDirective,
     IconComponent,
+    WithLoadingPipe,
   ],
   declarations: [
     ButtonComponent,
@@ -36,6 +38,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ScreenNavigationComponent,
     ClickableDirective,
     IconComponent,
+    WithLoadingPipe,
   ],
   imports: [CommonModule, FontAwesomeModule],
 })

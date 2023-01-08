@@ -1,1 +1,15 @@
-<p>lessons-list-row works!</p>
+<div class="lesson-number">
+    <ng-content select="[lesson-number]"></ng-content>
+</div>
+<div class="lesson-name">
+    <ng-content select="[lesson-name]"></ng-content>
+</div>
+
+<div class="right-icons">
+    <ng-content select="[right-indicator]" *ngIf="!showActions; else actions">
+    </ng-content>
+
+    <ng-template #actions>
+        <ng-content select="[actions]"></ng-content>
+    </ng-template>
+</div>

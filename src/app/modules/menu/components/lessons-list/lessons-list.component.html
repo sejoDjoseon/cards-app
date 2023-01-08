@@ -4,7 +4,18 @@
 </app-lessons-list-header>
 <div class="scroll-content">
     <div class="inner">
-        <app-lessons-list-row></app-lessons-list-row>
-        <app-lessons-list-row></app-lessons-list-row>
+        <app-lessons-list-row *ngFor="let lesson of lessons">
+            <p lesson-number>1</p>
+            <p lesson-name>Ordinales</p>
+            <div right-indicator><fa-icon [icon]="faCoffee"></fa-icon></div>
+            <div actions>
+                <div>
+                    <fa-icon [icon]="faCoffee"></fa-icon>
+                </div>
+                <div>
+                    <fa-icon [icon]="faCoffee"></fa-icon>
+                </div>
+            </div>
+        </app-lessons-list-row>
     </div>
 </div>

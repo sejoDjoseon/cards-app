@@ -1,10 +1,20 @@
 @use "variables"
 
 :host
-    display: block
+    display: flex
     height: variables.$size-XL
-    cursor: pointer
+    padding-inline: variables.$size-XS
+    align-items: center
 
 :host:hover
     background-color: variables.$primary-color
     color: white
+
+.lesson-number
+    padding: variables.$size-XS
+
+.lesson-name
+    flex-grow: 1
+
+.right-icons
+    padding: variables.$size-XS

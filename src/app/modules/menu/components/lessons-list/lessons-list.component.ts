@@ -27,4 +27,9 @@ export class LessonsListComponent {
   readonly iconsName = IconName;
 
   lessons = LESSONS_MOCK;
+
+  playLesson(i: number, random = false) {
+    const lesson = this.lessons[i];
+    console.log(`play lesson ${lesson}, mode random = ${random}`);
+  }
 }

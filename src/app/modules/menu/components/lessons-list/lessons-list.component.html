@@ -4,15 +4,15 @@
 </app-lessons-list-header>
 <div class="scroll-content">
     <div class="inner">
-        <app-lessons-list-row *ngFor="let lesson of lessons">
+        <app-lessons-list-row *ngFor="let lesson of lessons; let i = index">
             <p lesson-number>1</p>
             <p lesson-name>Ordinales</p>
             <div right-indicator><app-icon [icon]="iconsName.NotViewed"></app-icon></div>
-            <div actions>
-                <div>
+            <div actions class="actions">
+                <div (click)="playLesson(i, true)">
                     <app-icon [icon]="iconsName.Random" size="L"></app-icon>
                 </div>
-                <div>
+                <div (click)="playLesson(i)">
                     <app-icon [icon]="iconsName.PlayInverted" size="L"></app-icon>
                 </div>
             </div>

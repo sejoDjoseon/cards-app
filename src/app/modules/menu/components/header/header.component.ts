@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { IconName } from 'src/shared/icons-helper';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +9,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class HeaderComponent {
   @Output()
   openOptions = new EventEmitter<void>();
+
+  iconName = IconName;
 }

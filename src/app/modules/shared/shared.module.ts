@@ -10,6 +10,8 @@ import { ScreenContainerComponent } from './components/screen-container/screen-c
 import { ContainerActionsComponent } from './components/container-actions/container-actions.component';
 import { ClickableDirective } from './directives/clickable.directive';
 import { ScreenNavigationComponent } from './components/screen-navigation/screen-navigation.component';
+import { IconComponent } from './components/icon/icon.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   exports: [
@@ -23,6 +25,7 @@ import { ScreenNavigationComponent } from './components/screen-navigation/screen
     ScreenContainerComponent,
     ScreenNavigationComponent,
     ClickableDirective,
+    IconComponent,
   ],
   declarations: [
     ButtonComponent,
@@ -32,7 +35,8 @@ import { ScreenNavigationComponent } from './components/screen-navigation/screen
     ScreenContainerComponent,
     ScreenNavigationComponent,
     ClickableDirective,
+    IconComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
 })
 export class SharedModule {}

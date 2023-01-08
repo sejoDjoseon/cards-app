@@ -1,6 +1,12 @@
 <h1>header works!</h1>
 <div class="buttons-right">
-    <app-circle-button></app-circle-button>
-    <app-circle-button (click)="openOptions.emit()"></app-circle-button>
-    <app-circle-button></app-circle-button>
+    <app-circle-button>
+        <app-icon [icon]="iconName.Menu"></app-icon>
+    </app-circle-button>
+    <app-circle-button (click)="openOptions.emit()">
+        <app-icon [icon]="iconName.Configuration"></app-icon>
+    </app-circle-button>
+    <app-circle-button>
+        <app-icon [icon]="iconName.Exit"></app-icon>
+    </app-circle-button>
 </div>

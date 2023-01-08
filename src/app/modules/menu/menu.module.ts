@@ -6,7 +6,6 @@ import { ConfigurationComponent } from './components/configuration/configuration
 import { MenuComponent } from './menu.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { CircleButtonComponent } from './components/header/components/circle-button/circle-button.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SharedModule } from '../shared/shared.module';
 import { LessonsComponent } from './screens/lessons/lessons.component';
@@ -30,12 +29,6 @@ import { LessonsListProgressComponent } from './components/lessons-list/componen
     LessonsListRowComponent,
     LessonsListProgressComponent,
   ],
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-    MatSidenavModule,
-    SharedModule,
-  ],
+  imports: [CommonModule, AppRoutingModule, MatSidenavModule, SharedModule],
 })
 export class MenuModule {}

@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-circle-button',
@@ -8,6 +7,4 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class CircleButtonComponent {
   @Output() click = new EventEmitter<void>();
-
-  faCoffee = faCoffee;
 }

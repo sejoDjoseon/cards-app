@@ -14,6 +14,7 @@ import { LessonsListComponent } from './components/lessons-list/lessons-list.com
 import { LessonsListHeaderComponent } from './components/lessons-list/components/lessons-list-header/lessons-list-header.component';
 import { LessonsListRowComponent } from './components/lessons-list/components/lessons-list-row/lessons-list-row.component';
 import { LessonsListProgressComponent } from './components/lessons-list/components/lessons-list-progress/lessons-list-progress.component';
+import { CourseService } from './services/course.service';
 
 @NgModule({
   declarations: [
@@ -30,5 +31,6 @@ import { LessonsListProgressComponent } from './components/lessons-list/componen
     LessonsListProgressComponent,
   ],
   imports: [CommonModule, AppRoutingModule, MatSidenavModule, SharedModule],
+  providers: [CourseService],
 })
 export class MenuModule {}

@@ -1,28 +1,40 @@
-<app-screen-container>
-    <app-container class="continue-container">
-        <p container-title>Vuelve donde lo dejaste</p>
-        <p>2º Trimestre - Sesión 25, Ordinales, Fracciones y Decimales</p>
-        <app-container-actions>
-            <app-button (click)="{}">Reproducción ordenada</app-button>
-            <app-button type="secondary" (click)="{}">Aleatorio</app-button>
-            <app-button type="secondary" (click)="{}">Siguiente sesión</app-button>
-        </app-container-actions>
-    </app-container>
+<app-screen-container *ngIf="courseObs$ | withLoading | async as obs">
+    <ng-template [ngIf]="obs.value">
+        <app-container class="continue-container">
+            <p container-title>Vuelve donde lo dejaste</p>
+            <p>{{obs.value.currentLesson.name}}</p>
+            <app-container-actions>
+                <app-button (click)="{}">Reproducción ordenada</app-button>
+                <app-button type="secondary" (click)="{}">Aleatorio</app-button>
+                <app-button type="secondary" (click)="{}">Siguiente sesión</app-button>
+            </app-container-actions>
+        </app-container>
 
-    <p class="section-title">Temario</p>
+        <p class="section-title">Temario</p>
 
-    <div class="trimesters-row">
-        <app-container appClickable (click)="navigateTrimesterLessons()">
-            <p container-title>1º Trimestre</p>
-            <p>50/50 sesiones</p>
-        </app-container>
-        <app-container appClickable (click)="navigateTrimesterLessons()">
-            <p container-title>2º Trimestre</p>
-            <p>50/50 sesiones</p>
-        </app-container>
-        <app-container appClickable (click)="navigateTrimesterLessons()">
-            <p container-title>3º Trimestre</p>
-            <p>50/50 sesiones</p>
-        </app-container>
-    </div>
+        <div class="trimesters-row">
+            <app-container appClickable (click)="navigateTrimesterLessons()">
+                <p container-title>1º Trimestre</p>
+                <p>50/50 sesiones</p>
+            </app-container>
+            <app-container appClickable (click)="navigateTrimesterLessons()">
+                <p container-title>2º Trimestre</p>
+                <p>50/50 sesiones</p>
+            </app-container>
+            <app-container appClickable (click)="navigateTrimesterLessons()">
+                <p container-title>3º Trimestre</p>
+                <p>50/50 sesiones</p>
+            </app-container>
+        </div>
+    </ng-template>
+
+    <ng-template [ngIf]="obs.loading">
+        <div class="loading">Cargando...</div>
+    </ng-template>
+
+    <ng-template>
+        <div class="error">Error obteniendo los datos del curso</div>
+    </ng-template>
+
+
 </app-screen-container>

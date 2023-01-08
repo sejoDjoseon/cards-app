@@ -1,26 +1,24 @@
 <div class="section-title">Configuración</div>
-<div class="content">
+<div *ngIf="optionsObs$ | async as options" class="content">
     <div class="form-container">
         <mat-form-field appearance="fill">
-            <mat-label>Select</mat-label>
-            <mat-select>
-                <mat-option value="one">First option</mat-option>
-                <mat-option value="two">Second option</mat-option>
+            <mat-label>Idioma</mat-label>
+            <mat-select [(value)]="currentLanguage">
+                <mat-option *ngFor="let lng of options.languages" [value]="lng">{{lng}}</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-            <mat-label>Select</mat-label>
-            <mat-select>
-                <mat-option value="one">First option</mat-option>
-                <mat-option value="two">Second option</mat-option>
+            <mat-label>Curso</mat-label>
+            <mat-select [(value)]="currentCourse">
+                <mat-option *ngFor="let course of options.courses" [value]="course.id">{{course.name}}</mat-option>
             </mat-select>
         </mat-form-field>
 
 
     </div>
     <div class="buttons-container">
-        <app-button>Guardar cambios</app-button>
-        <app-link>Cerrar sin guardar</app-link>
+        <app-button (click)="saveAndClose()">Guardar cambios</app-button>
+        <app-link (click)="close.emit()">Cerrar sin guardar</app-link>
     </div>
 </div>

@@ -18,4 +18,9 @@ interface Course {
   trimesters: Trimester[];
 }
 
-export { Trimester, Course };
+interface CourseNameId {
+  id: string;
+  name: string;
+}
+
+export { Trimester, Course, CourseNameId };

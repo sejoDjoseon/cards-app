@@ -16,6 +16,7 @@ import { LessonsListRowComponent } from './components/lessons-list/components/le
 import { LessonsListProgressComponent } from './components/lessons-list/components/lessons-list-progress/lessons-list-progress.component';
 import { CourseService } from './services/course.service';
 import { CurrentLessonPipe } from './screens/cards/pipes/current-lesson.pipe';
+import { ConfigurationService } from './services/configuration.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,6 @@ import { CurrentLessonPipe } from './screens/cards/pipes/current-lesson.pipe';
     CurrentLessonPipe,
   ],
   imports: [CommonModule, AppRoutingModule, MatSidenavModule, SharedModule],
-  providers: [CourseService],
+  providers: [CourseService, ConfigurationService],
 })
 export class MenuModule {}

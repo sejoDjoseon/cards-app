@@ -7,7 +7,7 @@ export class CourseService {
   constructor() {}
 
   private course: Course = {
-    id: '1',
+    id: '1-inf',
     language: 'es',
     name: '1º de infantil',
     currentLesson: {

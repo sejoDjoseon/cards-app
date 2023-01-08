@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { combineLatestWith, map, Observable, of } from 'rxjs';
+import { combineLatestWith, map, Observable, of, Subject } from 'rxjs';
 import { CourseNameId } from 'src/app/models/Course.model';
 
 @Injectable()
@@ -15,8 +15,9 @@ export class ConfigurationService {
   ];
 
   currentLanguage?: string;
-
   currentCourse?: string;
+
+  configurationChanged = new Subject();
 
   loadCurrentConfiguration(): Observable<void> {
     return of({ currentLanguage: 'es', currentCourse: '3-inf' }).pipe(
@@ -55,13 +56,10 @@ export class ConfigurationService {
     );
   }
 
-  setCurrentLanguage(lng: string): Observable<void> {
+  setCurrentConfiguration(lng: string, course: string): Observable<void> {
     this.currentLanguage = lng;
-    return of(undefined);
-  }
-
-  setCurrentCourse(course: string): Observable<void> {
     this.currentCourse = course;
+    this.configurationChanged.next(undefined);
     return of(undefined);
   }
 }

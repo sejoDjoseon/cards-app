@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Course } from 'src/app/models/Course.model';
+import { ConfigurationService } from '../../services/configuration.service';
 import { CourseService } from '../../services/course.service';
 
 @Component({
@@ -10,12 +11,20 @@ import { CourseService } from '../../services/course.service';
   styleUrls: ['./cards.component.sass'],
 })
 export class CardsComponent implements OnInit {
-  constructor(private router: Router, private courseService: CourseService) {}
+  constructor(
+    private router: Router,
+    private courseService: CourseService,
+    private configurationService: ConfigurationService
+  ) {}
 
   courseObs$?: Observable<Course>;
 
   ngOnInit(): void {
     this.courseObs$ = this.courseService.getCourse();
+
+    this.configurationService.configurationChanged.subscribe(() => {
+      this.courseObs$ = this.courseService.getCourse();
+    });
   }
 
   navigateTrimesterLessons(trimester: number) {

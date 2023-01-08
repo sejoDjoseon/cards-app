@@ -40,12 +40,7 @@ export class ConfigurationComponent implements OnInit {
 
   saveAndClose() {
     this.configurationService
-      .setCurrentCourse(this.currentCourse!!)
-      .pipe(
-        combineLatestWith(
-          this.configurationService.setCurrentLanguage(this.currentLanguage!!)
-        )
-      )
+      .setCurrentConfiguration(this.currentLanguage!!, this.currentCourse!!)
       .subscribe(() => {
         this.close.emit();
       });

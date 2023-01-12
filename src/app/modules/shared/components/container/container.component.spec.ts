@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ConfigurationService } from 'src/app/modules/menu/services/configuration.service';
 
 import { ContainerComponent } from './container.component';
 
@@ -8,9 +9,9 @@ describe('ContainerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContainerComponent ]
-    })
-    .compileComponents();
+      declarations: [ContainerComponent],
+      providers: [ConfigurationService],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ContainerComponent);
     component = fixture.componentInstance;

@@ -1,7 +1,9 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { WithLoadingPipe } from '../shared/pipes/with-loading.pipe';
 
 import { MenuComponent } from './menu.component';
+import { ConfigurationService } from './services/configuration.service';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
@@ -9,7 +11,8 @@ describe('MenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MenuComponent],
+      declarations: [MenuComponent, WithLoadingPipe],
+      providers: [ConfigurationService],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
 
